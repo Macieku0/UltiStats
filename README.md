@@ -8,7 +8,7 @@ Python 3.12.7
 Well designed user interface is crucial part of application due to high dynamics of the game. 
 It is very important to have easy to use and intuitive interface to gather data as fast as possible. 
 Idea is to have a multiplatform application with web interface and mobile application. 
-I am planning to use Python with Flet for interface design.
+I am planning to use Python Flet framework to build whole application MVP.
 
 
 ## General structure
