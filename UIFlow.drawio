@@ -1,28 +1,6 @@
 <mxfile host="65bd71144e">
-    <diagram name="Action - Point" id="z6aI_Nf8nbqKw_6ES5bR">
-        <mxGraphModel dx="713" dy="544" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
-            <root>
-                <mxCell id="0"/>
-                <mxCell id="1" parent="0"/>
-                <mxCell id="8ZKEaV6THU4rE0eOHfV3-3" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="8ZKEaV6THU4rE0eOHfV3-1" target="8ZKEaV6THU4rE0eOHfV3-2" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="8ZKEaV6THU4rE0eOHfV3-4" value="Type of throw" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];rotation=-45;" parent="8ZKEaV6THU4rE0eOHfV3-3" vertex="1" connectable="0">
-                    <mxGeometry x="-0.0441" y="-1" relative="1" as="geometry">
-                        <mxPoint x="-7" y="-12" as="offset"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="8ZKEaV6THU4rE0eOHfV3-1" value="No. / Name" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
-                    <mxGeometry x="310" y="70" width="80" height="80" as="geometry"/>
-                </mxCell>
-                <mxCell id="8ZKEaV6THU4rE0eOHfV3-2" value="No. Name" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
-                    <mxGeometry x="140" y="240" width="80" height="80" as="geometry"/>
-                </mxCell>
-            </root>
-        </mxGraphModel>
-    </diagram>
     <diagram id="TsnM5-IJDgOnN48OshSX" name="Overview">
-        <mxGraphModel dx="3965" dy="3520" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="3252" dy="2976" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -620,6 +598,28 @@
                 </mxCell>
                 <mxCell id="AG_lz8beOR3IgqdVukIY-71" value="TODO" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e3c800;fontColor=#000000;strokeColor=#B09500;" vertex="1" parent="1">
                     <mxGeometry x="970" y="1030" width="120" height="60" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+    <diagram name="Action - Point" id="z6aI_Nf8nbqKw_6ES5bR">
+        <mxGraphModel dx="713" dy="544" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="8ZKEaV6THU4rE0eOHfV3-3" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="8ZKEaV6THU4rE0eOHfV3-1" target="8ZKEaV6THU4rE0eOHfV3-2" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="8ZKEaV6THU4rE0eOHfV3-4" value="Type of throw" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];rotation=-45;" parent="8ZKEaV6THU4rE0eOHfV3-3" vertex="1" connectable="0">
+                    <mxGeometry x="-0.0441" y="-1" relative="1" as="geometry">
+                        <mxPoint x="-7" y="-12" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="8ZKEaV6THU4rE0eOHfV3-1" value="No. / Name" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+                    <mxGeometry x="310" y="70" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="8ZKEaV6THU4rE0eOHfV3-2" value="No. Name" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+                    <mxGeometry x="140" y="240" width="80" height="80" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
