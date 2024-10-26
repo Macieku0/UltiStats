@@ -64,3 +64,54 @@ JSON - Match struct
   }
 }
 -----------
+
+
+Project structure
+``` 
+├── README.md
+├── requirements.txt
+├── main.py
+├── config/
+│   ├── __init__.py
+│   └── settings.py          # Application configuration, DB settings, etc.
+├── src/
+│   ├── __init__.py
+│   ├── models/
+│   │   ├── __init__.py
+│   │   ├── team.py         # Team model
+│   │   ├── player.py       # Player model
+│   │   ├── match.py        # Match model
+│   │   ├── point.py        # Point model
+│   │   └── stats.py        # Statistics models
+│   ├── database/
+│   │   ├── __init__.py
+│   │   ├── connection.py   # Database connection handling
+│       └── domain_repositories.py   # Data access layer
+│   │   └── repository.py   # Data access layer
+│   ├── ui/
+│   │   ├── __init__.py
+│   │   ├── app.py         # Main UI application class
+│   │   ├── components/
+│   │   │   ├── __init__.py
+│   │   │   ├── theme.py   # Theme-related components
+│   │   │   ├── player_circle.py  # Player circle component
+│   │   │   └── common.py  # Shared UI components
+│   │   └── views/
+│   │       ├── __init__.py
+│   │       ├── base_view.py      # Base view class
+│   │       ├── start_page.py     # Start/landing page
+│   │       ├── team_manager.py   # Team creation/management
+│   │       ├── game_view.py      # Active game view
+│   │       ├── match_stats.py    # Match statistics view
+│   |       ├── point_view.py     # Point view
+│   │       └── player_stats.py   # Player statistics view
+│   └── utils/
+│       ├── __init__.py
+│       ├── validators.py   # Input validation functions
+│       └── statistics.py   # Statistics calculation helpers
+└── tests/
+    ├── __init__.py
+    ├── test_models/
+    ├── test_ui/
+    └── test_utils/
+```
