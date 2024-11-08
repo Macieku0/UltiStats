@@ -1,117 +1,32 @@
 # UltiStats
+
 Application for Ultimate Frisbee statistics gathering.
 
 ## Coding stack
-Python 3.12.7
+
+Backend - Python 3.12.7 (FastAPI, Pydantic, SQLAlchemy, SQLite)
+Frontend - HTML, CSS, JavaScript (Svelte)
 
 ## UI
-Well designed user interface is crucial part of application due to high dynamics of the game. 
-It is very important to have easy to use and intuitive interface to gather data as fast as possible. 
-Idea is to have a multiplatform application with web interface and mobile application. 
-I am planning to use Python Flet framework to build whole application MVP.
 
+Well designed user interface is crucial part of application due to high dynamics of the game.
+It is very important to have easy to use and intuitive interface to gather data as fast as possible.
+It is also important to have a good overview (with high readability) of the match statistics.
+Actions should be easy to perform and the user should be guided through the process of gathering data - using drag and drop, big buttons, etc.
 
-## General structure
-JSON - Match struct
------------
-{
-  "teams":{
-    "team_1_name":{
-      "players":{
-        "number":"name",
-      }
-    },
-    ...
-  },
-  "points":{
-    "point_number":{
-      "point_winner":"team_name",
-      "catcher":"player_number",
-      "thrower":"player_number",
-      "actions":{
-        "action_number":{
-          "action_type":"action_enum:throw,pull,pull_lift,pull_catch,turnover,call",
-          "action_details":{
-            "throw_details":{
-              "throw_type":"throw_enum/optinal",
-              "caught":"true/false",
-              },
-            "pull_details":{
-              "in_bounds":"true/false",
-              },
-            "pull_lift_details":{
-              "bricked":"true/false",
-              },
-            "pull_catch_details":{
-              "caught":"true/false",
-              },
-            "turnover_details":{
-              "turnover_type":"turnover_enum",
-              },
-            "call_details":{
-              "call_type":"call_enum",
-              "calling_player":"player_number",
-              "call_result":"call_result_enum",
-              },
-          },
-          "initial_team":"team_name",
-          "initial_holder":"player_number",
-          "destination":"player_number" # If action type == "drop" or similar than destination player is from other team
-          "destination_team":"team_name"
-        }  
-      }
-    }
-  }
-}
------------
+### Views
 
+1. Start page view - Landing page with basic information about the application and links to other views:
 
-Project structure
-``` 
-├── README.md
-├── requirements.txt
-├── main.py
-├── config/
-│   ├── __init__.py
-│   └── settings.py          # Application configuration, DB settings, etc.
-├── src/
-│   ├── __init__.py
-│   ├── models/
-│   │   ├── __init__.py
-│   │   ├── team.py         # Team model
-│   │   ├── player.py       # Player model
-│   │   ├── match.py        # Match model
-│   │   ├── point.py        # Point model
-│   │   └── stats.py        # Statistics models
-│   ├── database/
-│   │   ├── __init__.py
-│   │   ├── connection.py   # Database connection handling
-│       └── domain_repositories.py   # Data access layer
-│   │   └── repository.py   # Data access layer
-│   ├── ui/
-│   │   ├── __init__.py
-│   │   ├── app.py         # Main UI application class
-│   │   ├── components/
-│   │   │   ├── __init__.py
-│   │   │   ├── theme.py   # Theme-related components
-│   │   │   ├── player_circle.py  # Player circle component
-│   │   │   └── common.py  # Shared UI components
-│   │   └── views/
-│   │       ├── __init__.py
-│   │       ├── base_view.py      # Base view class
-│   │       ├── start_page.py     # Start/landing page
-│   │       ├── team_manager.py   # Team creation/management
-│   │       ├── game_view.py      # Active game view
-│   │       ├── match_stats.py    # Match statistics view
-│   |       ├── point_view.py     # Point view
-│   │       └── player_stats.py   # Player statistics view
-│   └── utils/
-│       ├── __init__.py
-│       ├── validators.py   # Input validation functions
-│       └── statistics.py   # Statistics calculation helpers
-└── tests/
-    ├── __init__.py
-    ├── test_models/
-    ├── test_ui/
-    └── test_utils/
-```
+- Team manager
+- Create Game view
+- Start Game view
+- Match statistics
+- Player statistics
+
+2. Team manager view - Team creation and players management view
+3. Create Game view - Page where user can setup new game - choose teams
+4. Start Game view - Page where user can choose which game to start and add details about the point - players involved and which team starts on offence - it will lead to another view "Point"
+5. Point view - This page starts with form to fill about the players involved in the point and the pull info. After submitting the form view will be changed. It will show the point in progress with the player that holds the disc after the pull and rest of the players from the team. In this view user can add details about the point - one by one - throw, catch, turnover, call, etc. After the point is finished user can submit the point and go back to the "Point view" for next point view.
+6. Match statistics view - View with statistics about the match - course of the each point, summary of the points, turnovers, calls, etc.
+7. Player statistics view - View with statistics about the player - number of points played, turnovers, catches, throws, for each match and in total.

@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* Default light theme styles */
+  body {
+    @apply bg-gray-50 text-gray-900;
+  }
+  
+  /* Dark theme overrides */
+  .dark body {
+    @apply bg-gray-900 text-gray-100;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply px-4 py-2 rounded-lg font-semibold text-white transition-colors duration-200;
+  }
+  
+  .btn-primary {
+    @apply bg-ultimate-blue hover:bg-blue-800 dark:bg-blue-600 dark:hover:bg-blue-700;
+  }
+  
+  .btn-secondary {
+    @apply bg-gray-500 hover:bg-gray-600 dark:bg-gray-600 dark:hover:bg-gray-700;
+  }
+  
+  .card {
+    @apply bg-white rounded-lg shadow-md p-6
+           dark:bg-gray-800 dark:shadow-gray-900;
+  }
+  
+  .input {
+    @apply px-3 py-2 border border-gray-300 rounded-md 
+           focus:outline-none focus:ring-2 focus:ring-ultimate-blue focus:border-transparent
+           dark:bg-gray-700 dark:border-gray-600 dark:text-white 
+           dark:focus:ring-blue-500;
+  }
+}
